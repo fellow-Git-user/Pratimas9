@@ -159,7 +159,7 @@ function task76(data){
     console.log(item)
   })
 }
-// console.log(task76(posts))
+// (task76(posts))
 
 function task77(data){
   let lastFive = posts.slice(-5, posts.length);
@@ -167,4 +167,93 @@ function task77(data){
     console.log(item)
   })
 }
-console.log(task77(posts))
+// (task77(posts))
+
+function task78(data){
+  let from5To15 = posts.slice(4, 15);
+  from5To15.forEach(function(item){
+    console.log(item)
+  })
+}
+// task78(posts)
+
+function task79(data){
+  let everySecond = posts.filter(function(item, index){
+    return index % 2 === 1
+  })
+  return everySecond.forEach(function(item){
+    console.log(item)
+  })
+}
+
+// task79(posts)
+
+function task710(data){
+  let from5To15 = posts.splice(1, 23);
+  from5To15.forEach(function(item){
+    
+  })
+  return posts.forEach(function(elements){
+    console.log(elements)
+  })
+}
+// task710(posts)
+
+function task711(data){
+  return posts[0].title
+  
+}
+// console.log(task711(posts))
+
+function task712(data){
+  return posts[1].body
+  
+}
+// console.log(task712(posts))
+
+function task713(data){
+  return `Post title is '${posts[2].title}' and the content is '${posts[2].body}'`
+}
+// console.log(task713(posts))
+
+function task714(data){
+  posts.forEach(function(objects){
+    console.log(objects)
+  })
+  
+}
+// task714(posts)
+
+function task715(data){
+  posts.forEach(function(objects){
+    console.log(objects.title)
+  })
+  
+}
+// task715(posts)
+
+function task716(data){
+  posts.forEach(function(objects){
+    console.log(objects.body)
+  })
+  
+}
+//  task716(posts)
+
+function task716(data){
+  posts.forEach(function(objects){
+    console.log(`Title: ${objects.title}. Content: ${objects.body}`)
+  })
+  
+}
+// task716(posts)
+
+function task717(data){
+  posts.forEach(function(objects){
+    console.log(`Title: ${objects.title}. Content: ${objects.body}`)
+  })
+  
+}
+task717(posts)
+
+
