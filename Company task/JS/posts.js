@@ -151,7 +151,7 @@ function task75(data){
   let middleSlice = posts.slice(middle, middle + 1)
   return middleSlice[0]  
 }
-console.log(task75(posts))
+// console.log(task75(posts))
 
 function task76(data){
   let firstFour = posts.slice(0, 4);
@@ -159,6 +159,12 @@ function task76(data){
     console.log(item)
   })
 }
-console.log(task76(posts))
+// console.log(task76(posts))
 
-// function task77
+function task77(data){
+  let lastFive = posts.slice(-5, posts.length);
+  lastFive.forEach(function(item){
+    console.log(item)
+  })
+}
+console.log(task77(posts))
