@@ -129,7 +129,7 @@ const posts = [
 function task71(data) {
     console.log(data[0])
 }
-// task71(posts)
+//  task71(posts)
 
 function task72(data) {
     console.log(data.at(-1))
@@ -179,25 +179,24 @@ function task78(data){
 
 function task79(data){
   let everySecond = posts.filter(function(item, index){
-    return index % 2 === 1
+    if (index % 2 === 1){
+      // console.log(item)
+    }
+    
   })
-  return everySecond.forEach(function(item){
-    console.log(item)
-  })
+  
 }
 
-// task79(posts)
+ task79(posts)
 
 function task710(data){
   let from5To15 = posts.splice(1, 23);
-  from5To15.forEach(function(item){
-    
+  posts.forEach(function(item){
+    // console.log(item)
   })
-  return posts.forEach(function(elements){
-    console.log(elements)
-  })
+  
 }
-// task710(posts)
+ task710(posts)
 
 function task711(data){
   return posts[0].title
@@ -249,11 +248,117 @@ function task716(data){
 // task716(posts)
 
 function task717(data){
-  posts.forEach(function(objects){
-    console.log(`Title: ${objects.title}. Content: ${objects.body}`)
+  let firstFour = posts.slice(0, 4)
+  firstFour.forEach(function(objects){
+    console.log(`Title: "${objects.title}". Content: "${objects.body}"`)
   })
   
 }
-task717(posts)
+// task717(posts)
+
+function task718(data){
+  let firstFour = posts.slice(18, 25)
+  firstFour.forEach(function(objects){
+    console.log(`Title: "${objects.title}". Content: "${objects.body}"`)
+  })
+  
+}
+// task718(posts)
+
+function task722(data){
+ let startsWithS = posts.filter(function(post){
+  if (post.title.charAt(0) === 's'){
+  console.log(post)
+  }
+  
+ })
+  
+}
+// task722(posts)
+
+function task723(data){
+  let startsWithS = posts.filter(function(titles){
+   if ((titles.title.charAt(titles.title.length - 1) === 't' || 
+   titles.title.charAt(titles.title.length - 1) === 'm')){
+    console.log(titles)
+   }
+   
+  })
+  
+ }
+//  task723(posts)
+
+ function task724(data){
+  let startsWithS = posts.filter(function(post){
+   console.log(post.title.length > 15)
+  })
+   
+ }
+  // task724(posts)
+
+ function task725(data){
+  let startsWithS = posts.filter(function(titles){
+   console.log(titles.title.length < 20 && titles.body.length > 50)
+  })
+   
+ }
+//  task725(posts)
+
+ function task726(data){
+  posts.forEach(function(titles){
+    if(
+      titles.title.length >= 20 && 
+      titles.title.length <= 30 && 
+      titles.body.length > 70 && 
+      titles.body.length <= 130
+       
+    ) {
+    console.log(titles);
+  } 
+  });
+}
+//  task726(posts)
+
+ function task727(data){
+  data.forEach(function(post){
+    console.log(`Title: ${post.title}, Body: ${post.body}`);
+    if (post.title.includes('it') && post.body.includes('quo')){
+      console.log('Match:', post);
+    } 
+  });
+  }
+    
+
+// task727(posts)
+
+ function task728(data){
+  data.forEach(function(post){
+    if (post.body.includes(' sit ')){
+      console.log('Match:', post);
+    } 
+  });
+  }
+    
+
+// task728(posts)
+
+function task729(data){
+  data.forEach(function(post){
+    if (post.title.includes('a') > 3 && post.body.includes('o') < 7){
+      console.log('Match:', post);
+    } 
+  });
+  }
+    
+
+task729(posts)
+
+
+
+
+
+ 
+
+
 
 
